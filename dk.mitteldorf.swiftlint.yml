@@ -31,6 +31,8 @@ attributes:
 conditional_returns_on_newline:
     if_only: true
 
+force_cast: error
+force_try: error
 force_unwrapping:
   severity: error
 
@@ -38,6 +40,9 @@ identifier_name:
   excluded:
     - id
     - to
+
+indentation_width:
+  indentation_width: 4
 
 overridden_super_call:
   severity: error
