@@ -22,6 +22,7 @@ excluded:
 opt_in_rules:
   - anyobject_protocol
   - custom_rules
+  - todo
   
 # Configure Rules
 
