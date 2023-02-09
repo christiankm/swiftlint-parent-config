@@ -1,0 +1,17 @@
+# This SwiftLint configuration contains my most basic rules I would use in all projects or packages.
+# You can use this as a parent config by adding the below to your local .swiftlint.yml file
+# 
+# parent_config: 
+
+# We use the Kode (Ray Wenderlich) Swift Style Guide, and their base SwiftLint configuration as a base.
+# https://github.com/kodecocodes/swift-style-guide
+parent_config: https://raw.githubusercontent.com/kodecocodes/swift-style-guide/main/com.raywenderlich.swiftlint.yml
+
+excluded:
+  - Screenshots
+  - scripts
+  - fastlane
+  - Frameworks
+  - vendor
+  - Packages
+  - Pods
