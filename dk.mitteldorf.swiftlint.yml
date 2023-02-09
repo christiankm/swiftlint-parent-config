@@ -1,7 +1,7 @@
 # This SwiftLint configuration contains my most basic rules I would use in all projects or packages.
 # You can use this as a parent config by adding the below to your local .swiftlint.yml file
 # 
-# parent_config: 
+# parent_config: https://raw.githubusercontent.com/christiankm/swiftlint-parent-config/main/dk.mitteldorf.swiftlint.yml
 
 # We use the Kode (Ray Wenderlich) Swift Style Guide, and their base SwiftLint configuration as a base.
 # https://github.com/kodecocodes/swift-style-guide
@@ -15,3 +15,62 @@ excluded:
   - vendor
   - Packages
   - Pods
+
+#disabled_rules:
+#  - 
+
+opt_in_rules:
+  - anyobject_protocol
+  - custom_rules
+  
+# Configure Rules
+
+attributes:
+    always_on_same_line: ["@IBOutlet", "@IBAction", "@objc"]
+
+conditional_returns_on_newline:
+    if_only: true
+
+force_unwrapping:
+  severity: error
+
+identifier_name:
+  excluded:
+    - id
+    - to
+
+overridden_super_call:
+  severity: error
+
+prohibited_super_call:
+  severity: error
+  
+# Custom rules
+custom_rules:
+  boolean_return:
+    name: "Boolean Return"
+    regex: "\\? (true : false)|(false : true)"
+    message: "It is redundant to return true or false for a boolean value. Instead return the value itself."
+    severity: warning
+
+  documentation_ticks:
+    name: "Documentation Ticks"
+    regex: "´"
+    message: "Incorrect Markdown format used. Mark types in '`' instead of '´' for proper formatting."
+    match_kinds:
+      - comment
+      - doccomment
+    severity: warning
+  
+  redundant_default_parameter:
+    name: "Redundant Default Value"
+    regex: "(present|dismiss|animateWithDuration)\\(\\V*, completion: nil\\)"
+    message: "Specifying a parameter with it's default value is redundant. Remove parameter or change it's value."
+    severity: warning
+
+  # Custom rule violating if tabs are used for indentation instead of spaces.
+  tabs:
+    name: "Tab Whitespace"
+    regex: "\\t"
+    message: "Using tabs is discouraged. Use spaces only."
+    severity: warning
