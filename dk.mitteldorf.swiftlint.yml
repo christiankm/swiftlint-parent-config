@@ -16,29 +16,72 @@ excluded:
   - Packages
   - Pods
 
-#disabled_rules:
-#  - 
+disabled_rules:
+  - vertical_whitespace_between_cases
+  - vertical_whitespace_opening_braces
 
 opt_in_rules:
   - anyobject_protocol
+  - attributes
+  - class_delegate_protocol
+  - closure_spacing
+  - collection_alignment
+  - conditional_returns_on_newline
   - custom_rules
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - convenience_type
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - first_where
+  - flatmap_over_map_reduce
+  - force_unwrapping
+  - last_where
+  - legacy_multiple
+  - legacy_nsgeometry_functions
+  - legacy_random
+  - operator_usage_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
   - todo
+  - toggle_bool
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - vertical_whitespace_closing_braces
+  - xct_specific_matcher
+  - yoda_condition
   
 # Configure Rules
 
 attributes:
-    always_on_same_line: ["@IBOutlet", "@IBAction", "@objc"]
+  always_on_same_line: ["@IBOutlet", "@IBAction", "@objc"]
 
 conditional_returns_on_newline:
-    if_only: true
+  if_only: true
 
 force_cast: error
+
 force_try: error
+
 force_unwrapping:
   severity: error
 
 identifier_name:
   excluded:
+    - i
+    - j
+    - x
+    - y
+    - z
     - id
     - to
 
@@ -68,6 +111,7 @@ custom_rules:
       - doccomment
     severity: warning
   
+  # Custom rule violating if specifing a parameter to it's default value.
   redundant_default_parameter:
     name: "Redundant Default Value"
     regex: "(present|dismiss|animateWithDuration)\\(\\V*, completion: nil\\)"
