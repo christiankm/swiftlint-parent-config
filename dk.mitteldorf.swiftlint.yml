@@ -39,6 +39,7 @@ opt_in_rules:
   - first_where
   - flatmap_over_map_reduce
   - force_unwrapping
+  - indentation_width
   - last_where
   - legacy_multiple
   - legacy_nsgeometry_functions
