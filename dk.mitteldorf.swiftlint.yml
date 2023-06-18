@@ -63,9 +63,6 @@ opt_in_rules:
   
 # Configure Rules
 
-attributes:
-  always_on_same_line: ["@IBOutlet", "@IBAction", "@objc"]
-
 conditional_returns_on_newline:
   if_only: true
 
