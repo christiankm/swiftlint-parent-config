@@ -21,7 +21,6 @@ disabled_rules:
   - vertical_whitespace_opening_braces
 
 opt_in_rules:
-  - anyobject_protocol
   - attributes
   - class_delegate_protocol
   - closure_spacing
