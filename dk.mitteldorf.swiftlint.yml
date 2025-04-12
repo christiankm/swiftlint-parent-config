@@ -90,6 +90,9 @@ overridden_super_call:
 
 prohibited_super_call:
   severity: error
+
+vertical_whitespace:
+  max_empty_lines: 2
   
 # Custom rules
 custom_rules:
